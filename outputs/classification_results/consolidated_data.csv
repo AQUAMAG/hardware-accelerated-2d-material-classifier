@@ -1,0 +1,2 @@
+filename,flake_name,total_pixels,valid_pixels,invalid_pixels,background_pixels,background_fraction,compression_factor,runtime_seconds,layer_0_percentage,layer_0_pixel_count,layer_1_percentage,layer_1_pixel_count,layer_2_percentage,layer_2_pixel_count,layer_3_percentage,layer_3_pixel_count
+Fig_4f_data.json,Fig_4f,16156416,16156416,0,13971734,0.8647792926351983,1,3.477871825998591,79.59437291042765,12859598,9.074258796010204,1466075,1.2460560559965774,201318,10.08531223756556,1629425

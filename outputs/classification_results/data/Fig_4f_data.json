@@ -1,0 +1,32 @@
+{
+  "flake_name": "Fig_4f",
+  "total_pixels": 16156416,
+  "valid_pixels": 16156416,
+  "invalid_pixels": 0,
+  "background_pixels": 13971734,
+  "background_fraction": 0.8647792926351983,
+  "compression_factor": 1,
+  "runtime_seconds": 3.477871825998591,
+  "layers": {
+    "layer_0": {
+      "pixel_count": 12859598,
+      "percentage": 79.59437291042765,
+      "display_name": "0 layers"
+    },
+    "layer_1": {
+      "pixel_count": 1466075,
+      "percentage": 9.074258796010204,
+      "display_name": "1 layer"
+    },
+    "layer_2": {
+      "pixel_count": 201318,
+      "percentage": 1.2460560559965774,
+      "display_name": "2 layers"
+    },
+    "layer_3": {
+      "pixel_count": 1629425,
+      "percentage": 10.08531223756556,
+      "display_name": "3 layers"
+    }
+  }
+}

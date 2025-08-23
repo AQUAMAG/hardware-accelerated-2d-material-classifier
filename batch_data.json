@@ -1,0 +1,45 @@
+{
+    "base_params": {
+        "min_clusters": 5,
+        "max_clusters": 10,
+        "convergence_param": 0.000001,
+        "batch_size": 50000,
+        "initialization_method": "meanshift",
+        "comp_rate": null, 
+        "density": 8,
+        "dbscan_eps_factor": 0.5,
+        "outlier_fraction": 175
+    },
+    "images": [
+        {
+            "img_file": "./image_data/training/5000micron_90degrees_trial3_ID35 X=9.2833Y=-10.2041(41-3).png",
+            "flake_name": "graphite0",
+            "crop": [1200,1500,700,1000],
+            "masking": [[100,150,250,300]]
+        },
+        {
+            "img_file": "./image_data/training/5000micron_90degrees_trial3_ID35 X=9.2833Y=-10.2041(41-3).png",
+            "flake_name": "mlg0",
+            "crop": [1400,1550,1950,2050],
+            "masking": [[0,40,0,60]]
+        },
+        {
+            "img_file": "./image_data/training/5000micron_90degrees_trial3_ID35 X=10.0195Y=-3.0261(43-29).png",
+            "flake_name": "flg0",
+            "crop": [1000,1200,400,700],
+            "masking": 
+                [[0,50,150,300],
+                [100,200,0,50]]
+        }
+        
+    ],
+    "created_date": "2025-06-20 10:30:00",
+    "version": 1,
+    "description": "Batch processing configuration for GMM image clustering",
+    "notes": [
+        "crop format: [x1, y1, x2, y2] where (x1,y1) is top-left and (x2,y2) is bottom-right",
+        "masking format: list of regions [[x1, y1, x2, y2], ...] to exclude from analysis",
+        "Use -1 in masking coordinates to indicate 'to the edge' (e.g., [100, -1, 50, -1] means from x=100 to right edge, y=50 to bottom edge)",
+        "Set crop or masking to null if not needed for a particular image"
+    ]
+}

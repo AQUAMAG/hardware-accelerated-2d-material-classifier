@@ -1,0 +1,18 @@
+Layer Analysis Summary: Fig_4f
+==================================================
+
+Processing Information:
+  Runtime: 3.48 seconds
+  Compression factor: 1
+
+Image Statistics:
+  Total pixels: 16,156,416
+  Valid pixels: 16,156,416 (100.00%)
+  Invalid pixels: 0 (0.00%)
+  Background pixels: 13,971,734 (86.48%)
+
+Layer Distribution:
+  0 layers: 12,859,598 pixels (79.59%)
+  1 layer: 1,466,075 pixels (9.07%)
+  2 layers: 201,318 pixels (1.25%)
+  3 layers: 1,629,425 pixels (10.09%)
