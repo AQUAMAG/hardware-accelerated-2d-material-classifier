@@ -148,7 +148,7 @@ def calculate_cluster_probabilities(pixels_gpu, master_weights, master_means, ma
     return cluster_prob
 
 def testing(img_file, master_cat_file=None, cluster_count=None, 
-            comp_rate=100, show_plot=True):
+            comp_rate=100, show_plot=True, masking=None):
     """
     Main testing function for image classification
 
@@ -164,6 +164,9 @@ def testing(img_file, master_cat_file=None, cluster_count=None,
         Compression factor: comp = sqrt(pixels)/comp_rate
     show_plot : bool [default: True]
         Whether to display plots during processing
+    masking : list, optional
+        List of masking coordinates [[y_min, y_max, x_min, x_max], ...].
+        If None, will use automatic background detection.
     """
     
     tic = time.perf_counter()
@@ -187,8 +190,12 @@ def testing(img_file, master_cat_file=None, cluster_count=None,
     
     # Conduct automatic background detection
     print("Detecting background regions automatically...")
-
-    mask = automatic_background_detection(img_bl)
+    if masking is not None:
+        mask = np.ones(img_bl[:,:,0].shape)
+        for reg in masking:
+            mask[reg[0]:reg[1], reg[2]:reg[3]] = 0
+    else:       
+        mask = automatic_background_detection(img_bl)
         
     # Check background fraction
     background_fraction = np.sum(mask == 0) / mask.size
