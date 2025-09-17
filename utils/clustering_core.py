@@ -189,12 +189,14 @@ def testing(img_file, master_cat_file=None, cluster_count=None,
         img_bl = cv2.bilateralFilter(img_bl, 2, 1, 1)
     
     # Conduct automatic background detection
-    print("Detecting background regions automatically...")
+
     if masking is not None:
+        print("Using manual masking for background detection...")
         mask = np.ones(img_bl[:,:,0].shape)
         for reg in masking:
             mask[reg[0]:reg[1], reg[2]:reg[3]] = 0
     else:       
+        print("Detecting background regions automatically...")
         mask = automatic_background_detection(img_bl)
         
     # Check background fraction
