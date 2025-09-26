@@ -2,7 +2,7 @@
 # High-Throughput Evaluation of Mechanical Exfoliation Using Optical Classification of 2D Materials
 A python based image processing software using CuPy for hardware acceleration to classify 2D material thicknesses designed for classification of large datasets very quickly.
 
-The associated publication for this software is located at _High-Throughput Evaluation of Mechanical Exfoliation Using Optical Classification of Two-Dimensional Materials_ [https://doi.org/10.3390/mi16101084](https://doi.org/10.3390/mi16101084)
+The associated publication for this software is _High-Throughput Evaluation of Mechanical Exfoliation Using Optical Classification of Two-Dimensional Materials_ [https://doi.org/10.3390/mi16101084](https://doi.org/10.3390/mi16101084)
 
 This software trains on example 2D material flake images using unsupervised clustering to create a catalog to be used classification of test data images.
 
